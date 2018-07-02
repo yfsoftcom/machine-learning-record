@@ -10,3 +10,4 @@ snap/*.png
 *.pyc
 .DS_Store
 *.exe
+.vscode/
