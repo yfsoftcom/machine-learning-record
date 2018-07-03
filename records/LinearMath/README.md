@@ -5,6 +5,9 @@
 
 导师讲的很好，不过基础不牢固，很多东西要一边看一边搜索学习。
 
+## Other Records
+[https://blog.csdn.net/mathmetics/article/category/1401288](https://blog.csdn.net/mathmetics/article/category/1401288)
+
 ## Markdown Support Latex
 Vscode Plugin: `Markdown+Math`
 ## Download All Videos
