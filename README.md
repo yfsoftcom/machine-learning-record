@@ -10,3 +10,10 @@ or
 
 ## Foo1
 - [ ] About `Numpy` & `Matplotlib`
+
+
+
+## Manuals
+
+- [ ] About CNN
+  [卷积神经网络CNN](https://blog.csdn.net/stdcoutzyx/article/details/41596663)
