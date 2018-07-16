@@ -3,4 +3,4 @@ matplotlib
 pandas
 requests
 lxml
-pyspider
+pygame
