@@ -3,6 +3,8 @@
 """
 实现一个神经元的分类算法
 https://www.imooc.com/learn/813
+blog
+http://blog.yunplus.io/%E4%BD%BF%E7%94%A8Python%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9A%84%E5%8D%95%E4%B8%80%E7%A5%9E%E7%BB%8F%E5%85%83/
 """
 import numpy as np
 import pandas as pd
@@ -61,6 +63,9 @@ class Perceptron(object):
     def net_input(self, X):
         return np.dot(X, self.w_[1:] + self.w_[0])
         
+    """
+    将输入信息进行分类
+    """
     def predict(self, X):
         return np.where(self.net_input(X) >= 0.0, 1, -1)
 
@@ -77,7 +82,7 @@ class Perceptron(object):
     def load_model(self):
         if os.path.exists('a.model'):
             with open('a.model', 'r', encoding="UTF-8") as f:
-                data = json.loads(f.read())
+                data = json.load(f)
                 self.w_ = np.array(data)
             return True
         else:
@@ -128,11 +133,13 @@ plt.legend(loc='upper left')
 
 # 定义一个神经元，并进行训练
 ppn = Perceptron(eta=0.1, n_iter=100)
-# print(ppn.get_model())
+
+# 如果存在已训练过的模型，则无需重复训练
 if not ppn.is_fited():
     ppn.fit(X,y)
 # print(ppn.get_model())
 
+# 将训练好的简单神经元作为分类器进行输入的分类
 def plot_decision_region(X, y, classifier, resolution = 0.02):
     markers=('s','x','o','v')
     colors=('red','blue','lightgreen','gray','cyan')
